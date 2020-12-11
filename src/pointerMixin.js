@@ -65,7 +65,6 @@ export default {
       ] : 'multiselect__option--disabled'
     },
     addPointerElement (key) {
-      alert('pointer')
       console.log(key.target.value, this.filteredOptions, this.pointer)
       /* istanbul ignore else */
       if (this.filteredOptions.length > 0) {
