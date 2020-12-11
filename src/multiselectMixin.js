@@ -435,8 +435,9 @@ export default {
      * Updates the search value
      * @param  {String}
      */
-    updateSearch (query) {
-      this.search = query
+    updateSearch (event) {
+      let query = event.target.value
+      if (query.includes(',')) this.addPointerElement(event); else this.search = query
     },
     /**
      * Finds out if the given query is already present
