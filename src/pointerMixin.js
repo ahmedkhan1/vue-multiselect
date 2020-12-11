@@ -64,10 +64,14 @@ export default {
         { 'multiselect__option--group-selected': this.wholeGroupSelected(group) }
       ] : 'multiselect__option--disabled'
     },
-    addPointerElement ({ key } = 'Enter') {
+    addPointerElement (key) {
+      alert('pointer')
+      console.log(key.target.value, this.filteredOptions, this.pointer)
       /* istanbul ignore else */
       if (this.filteredOptions.length > 0) {
         this.select(this.filteredOptions[this.pointer], key)
+      } else if (key.target.value.includes(',')) {
+        this.select(this.filteredOptions[this.pointer], 'Enter')
       }
       this.pointerReset()
     },

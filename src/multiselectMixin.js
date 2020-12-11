@@ -437,7 +437,7 @@ export default {
      */
     updateSearch (event) {
       let query = event.target.value
-      if (query.includes(',')) this.addPointerElement(event); else this.search = query
+      if (query.includes(',')) this.$emit('tag', query, ''); else this.search = query
     },
     /**
      * Finds out if the given query is already present
