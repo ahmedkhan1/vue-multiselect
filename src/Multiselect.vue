@@ -644,7 +644,7 @@ fieldset[disabled] .multiselect {
   display: block;
   background: #fff;
   width: 100%;
-  max-height: 240px;
+  max-height: 160px !icon;
   overflow: auto;
   border: 1px solid #e8e8e8;
   border-top: none;
