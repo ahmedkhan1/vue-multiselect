@@ -73,10 +73,10 @@ new Vue({
         }
       }
     },
-    onTagging (newTag) {
-      this.source.push({ name: newTag, language: newTag })
-      this.value.push({ name: newTag, language: newTag })
-    }
+    // onTagging (newTag) {
+    //   this.source.push({ name: newTag, language: newTag })
+    //   this.value.push({ name: newTag, language: newTag })
+    // }
   },
   mounted () {
     this.adjustNav()

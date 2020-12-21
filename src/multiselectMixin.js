@@ -440,6 +440,7 @@ export default {
       if (query.includes(',')) {
         this.$emit('tag', query.replace(',', ''), '')
         this.search = ''
+        this.deactivate()
       } else {
         this.search = query
       }
@@ -509,6 +510,7 @@ export default {
         this.selectGroup(option)
         return
       }
+
       if (this.blockKeys.indexOf(key) !== -1 ||
         this.disabled ||
         option.$isDisabled ||
